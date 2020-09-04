@@ -1,0 +1,854 @@
+<ion-content>
+	<div  style="height: 100%; width: 100%; background-image: linear-gradient( to right, rgb(42, 155, 121), rgb(25, 139, 115));">
+
+<div  style="height: auto; width: 100%; background-image: linear-gradient( to right, rgb(42, 155, 121), rgb(25, 139, 115));">
+<div class="container" style="padding: 0.2em;">
+	<ion-card>
+			<ion-card-header>
+			<p style=" text-align: center;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">¿Pasamos al gráfico?</p>
+		   </ion-card-header>
+		<ion-card-content>
+			<hr style="width: 100%; margin-top: -5px; text-align: center; background-color: rgb(133, 128, 128)">		
+
+
+		</ion-card-content>
+	</ion-card>
+
+	<div *ngFor="let item of items6;let index = index" class="header" (click)="showSubItem6(index)">
+	<ion-button expand="block"> 
+		iniciar la historia clínica! 
+	</ion-button>
+	<!--Primeiro card-->
+		<ion-card class="animate_animated animate_zoomInUp" *ngIf="visibleIndex6 === index">
+			<ion-card-header>
+			<p style=" text-align: center;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+				1.- DATOS DEL NOTIFICANTE 
+</p>	
+		   </ion-card-header>
+		<ion-card-content style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >
+			<hr style="width: 100%; margin-top: -5px; text-align: center; background-color: rgb(133, 128, 128)">		
+				<form>
+
+					<!--primeiro input-->
+					<ion-row>
+					<ion-item>
+						<ion-label  position="floating">Responsable de la Notificación: </ion-label>
+						<ion-input></ion-input>
+					  </ion-item>
+					  </ion-row>
+
+
+					<!--segundo input-->
+					<ion-row>
+					<ion-item>
+						<ion-label position="floating">Establecimiento:  </ion-label>
+						<ion-input style="width: 100%;"></ion-input>
+					  </ion-item>
+					  </ion-row>
+
+
+					  
+					<!--terceiro input-->
+					<ion-row>
+						<ion-item>
+							<ion-label position="floating">Región Sanitaria: </ion-label>
+							<ion-input></ion-input>
+						  </ion-item>
+						  </ion-row>
+
+						  	<!--quarto input data-->
+					<ion-row>
+						<ion-item>
+							<ion-label position="floating">Fecha de Notificación: </ion-label>
+							<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+						</ion-item>
+						  </ion-row>
+	
+				</form>
+
+				
+
+		</ion-card-content>
+	</ion-card>
+	</div>
+
+
+
+
+
+
+  
+		
+
+
+
+
+
+
+
+
+
+		  <div *ngFor="let item of items;let index = index" class="header" (click)="showSubItem(index)">
+	<ion-button expand="block"> 
+		2°todo lleno
+	</ion-button>
+
+<!--Segundo card-->
+<ion-card  class="animate__animated animate__zoomInUp" *ngIf="visibleIndex === index">
+	<ion-card-header>
+	<p style=" text-align: center;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+		2.- DATOS DEL PACIENTE 
+ 
+</p>	
+   </ion-card-header>
+<ion-card-content style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >
+	<hr style="width: 100%; margin-top: -5px; text-align: center; background-color: rgb(133, 128, 128)">		
+		<form>
+
+			<!--quinto input-->
+			<ion-row>
+			<ion-item>
+				<ion-label  position="floating">Nombres y Apellidos:  </ion-label>
+				<ion-input></ion-input>
+			  </ion-item>
+			  </ion-row>
+
+
+			<!--sexto input-->
+			<ion-row>
+			<ion-item>
+				<ion-label position="floating">Documento de Identidad Nº:  </ion-label>
+				<ion-input type="number"></ion-input>
+			  </ion-item>
+			  </ion-row>
+<br>
+		<!--primeiro grupo de chceckBox-->
+		<ion-row style="text-align: center;"> 	  
+		<ion-col size="6">Cédula Identidad</ion-col>
+		
+	<ion-col size="1">
+		<ion-checkbox color="light"></ion-checkbox>
+	</ion-col>
+
+</ion-row>
+
+		<!--Segundo grupo de chceckBox-->
+		<ion-row style="text-align: center;"> 	  
+		<ion-col size="6">Pasaporte </ion-col>
+
+	<ion-col size="1">
+		<ion-checkbox color="light"></ion-checkbox>
+	</ion-col>
+	<span style="text-align: center;">(Aceptar solo documentos oficiales)</span>
+
+	</ion-row>
+	
+
+			  
+			<!--setimo input-->
+			<ion-row>
+				<ion-item>
+					<ion-label position="floating">Edad: </ion-label>
+					<ion-input type="number"></ion-input>
+				  </ion-item>
+
+<br>
+		<!--terceiro grupo de chceckBox-->
+				
+<ion-col size="6">Sexo: </ion-col>
+
+				  <ion-col size="1">M</ion-col>
+				  
+	<ion-col size="1">
+		
+	<ion-checkbox color="light"></ion-checkbox>
+	</ion-col>
+	<ion-col size="1">F</ion-col>
+
+	<ion-col size="1">
+		
+		<ion-checkbox color="light"></ion-checkbox>
+	</ion-col>
+		
+</ion-row>
+
+					  <!--oitavo input data-->
+			<ion-row>
+				<ion-item>
+					<ion-label position="floating">Fecha de nacimiento:  </ion-label>
+					<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+				</ion-item>
+				  </ion-row>
+<!--nono input-->
+<ion-row>
+	<ion-item>
+		<ion-label position="floating">Edad: </ion-label>
+		<ion-input type="number"></ion-input>
+	  </ion-item>
+	  </ion-row>
+<!--decimo input-->
+<ion-row>
+	<ion-item>
+		<ion-label position="floating">Departamento:  </ion-label>
+		<ion-input ></ion-input>
+	  </ion-item>
+	  </ion-row>
+<!--decimoPrimeiro input-->
+<ion-row>
+	<ion-item>
+		<ion-label position="floating"> Distrito: </ion-label>
+		<ion-input ></ion-input>
+	  </ion-item>
+	  </ion-row>
+<!--decimoSegundo input-->
+<ion-row>
+	<ion-item>
+		<ion-label position="floating">Barrio: </ion-label>
+		<ion-input ></ion-input>
+	  </ion-item>
+	  </ion-row>
+
+	  <!--decimoTerceiro input-->
+<ion-row>
+	<ion-item>
+		<ion-label position="floating">Dirección actual: </ion-label>
+		<ion-input ></ion-input>
+	  </ion-item>
+	  </ion-row>
+
+	   <!--decimoQuarto input-->
+<ion-row>
+	<ion-item>
+		<ion-label position="floating">Teléfono: </ion-label>
+		<ion-input ></ion-input>
+	  </ion-item>
+	  </ion-row>
+
+	</form>
+<br	>
+		
+
+</ion-card-content>
+</ion-card>
+</div>
+<!--Terceiro card-->
+
+<div *ngFor="let item of items1;let index = index" class="header" (click)="showSubItem1(index)">
+<ion-button expand="block"> 
+ 3° todo lleno
+</ion-button>
+
+<ion-card 	class="animate__animated animate__zoomInUp" *ngIf="visibleIndex1 === index"
+ >
+	<ion-card-header>
+	<p style=" text-align: center;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+		3.- DATOS CLINICOS
+	</p>	
+   </ion-card-header>
+<ion-card-content style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" >
+	<hr style="width: 100%; margin-top: -5px; text-align: center; background-color: rgb(133, 128, 128)">		
+		<form>
+
+			<!--decimoQuinto input-->
+			<ion-row>
+			<ion-item>
+				<ion-label  position="floating">Fecha de inicio de síntomas: </ion-label>
+				<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+			</ion-item>
+			  </ion-row>
+
+
+			<!--decimoSexto input-->
+			<ion-row>
+			<ion-item>
+				<ion-label position="floating">Fecha de primera consulta:  </ion-label>
+				<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+			</ion-item>
+			  </ion-row>
+
+
+			  
+			<ion-row>
+				<!--Quarto grupo de chceckBox-->
+				
+<ion-col size="4">Ambulatorio:</ion-col>
+
+<ion-col size="2">
+
+<ion-checkbox color="light"></ion-checkbox>
+</ion-col>
+<ion-col size="4">Internado:</ion-col>
+
+<ion-col size="2">
+
+<ion-checkbox color="light"></ion-checkbox>
+</ion-col>
+				  </ion-row>
+
+							<!--decimoSetimo input-->
+			<ion-row>
+				<ion-item>
+					<ion-label position="floating">Fecha de Internación:  </ion-label>
+					<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+				</ion-item>
+			</ion-row>
+										<!--decimoOitavo input-->
+
+			<ion-row>
+				<ion-item>
+					<ion-label position="floating"> Establecimiento internación: </ion-label>
+					<ion-input></ion-input>
+				</ion-item>
+				  </ion-row>
+
+
+				  <ion-row>
+					<!--Quinto grupo de chceckBox-->
+					<ion-col size="6">Terapia Intensiva: </ion-col>
+
+					<ion-col size="1">S
+					</ion-col>
+					
+	  <ion-col size="1">
+		  
+	  <ion-checkbox color="light"></ion-checkbox>
+	  </ion-col>
+	  <ion-col size="1">N</ion-col>
+  
+	  <ion-col size="1">
+		  
+		  <ion-checkbox color="light"></ion-checkbox>
+	  </ion-col>
+					  </ion-row>
+
+					  	<!--decimoNono input-->
+
+			<ion-row>
+				<ion-item>
+					<ion-label position="floating"> Fecha internación UTI: </ion-label>
+					<ion-input></ion-input>
+				</ion-item>
+				  </ion-row>
+
+				  <ion-row>
+					<!--Quinto grupo de chceckBox-->
+					<ion-col size="6">Requerimiento de ARM: </ion-col>
+
+					<ion-col size="1">S
+					</ion-col>
+					
+	  <ion-col size="1">
+		  
+	  <ion-checkbox color="light"></ion-checkbox>
+	  </ion-col>
+	  <ion-col size="1">N</ion-col>
+  
+	  <ion-col size="1">
+		  
+		  <ion-checkbox color="light"></ion-checkbox>
+	  </ion-col>
+					  </ion-row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</form>
+
+		<ion-button (click)="presentModal()" expand="block"> 
+			Signos / Síntomas 		</ion-button> <br>
+			<ion-button (click)="presentModal1()" expand="block"> 
+				Factores de riesgo/Comorbilidades 
+						</ion-button> <br>
+
+</ion-card-content>
+</ion-card>
+</div>
+
+<div *ngFor="let item of items2;let index = index" class="header" (click)="showSubItem2(index)">
+<ion-button expand="block"> 
+4º todo lleno
+</ion-button>
+
+
+
+<ion-card class="animate_animated animate__zoomIn" *ngIf="visibleIndex2 === index">
+	<ion-card-header>
+	<p style=" text-align: center;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+		4.- ANTECEDENTES EPIDEMIOLOGICOS 
+	</p>
+   </ion-card-header>
+<ion-card-content>
+	<hr style="width: 100%; margin-top: -5px; text-align: center; background-color: rgb(133, 128, 128)">		
+
+
+	<ion-row>¿Ha viajado a una zona de riesgo conocida en los últimos 14 días previos al inicio de síntomas?: </ion-row>
+
+	<ion-row>
+		<!--Quinto grupo de chceckBox-->
+
+		<ion-col size="1">S
+		</ion-col>
+		
+<ion-col size="1">
+
+<ion-checkbox color="light"></ion-checkbox>
+</ion-col>
+<ion-col size="1">N</ion-col>
+
+<ion-col size="1">
+
+<ion-checkbox color="light"></ion-checkbox>
+</ion-col>
+		  </ion-row>
+
+		  <ion-row>
+			<ion-item>
+				<ion-label position="floating">¿Dónde? </ion-label>
+				<ion-input></ion-input>
+			  </ion-item>
+			  </ion-row>
+
+
+			  
+						  	<!--quarto input data-->
+							  <ion-row>
+								<ion-item>
+									<ion-label position="floating">Desde:  </ion-label>
+									<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+								</ion-item>
+								  </ion-row>
+
+								  
+						  	<!--quarto input data-->
+					<ion-row>
+						<ion-item>
+							<ion-label position="floating"> Hasta </ion-label>
+							<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+						</ion-item>
+						  </ion-row>
+
+
+
+						  
+	<ion-row>¿Ha estado en contacto con una persona confirmada con COVID-19 en los últimos 14 días previos al inicio de síntomas? </ion-row>
+
+	<ion-row>
+		<!--Quinto grupo de chceckBox-->
+
+		<ion-col size="1">S
+		</ion-col>
+		
+<ion-col size="1">
+
+<ion-checkbox color="light"></ion-checkbox>
+</ion-col>
+<ion-col size="1">N</ion-col>
+
+<ion-col size="1">
+
+<ion-checkbox color="light"></ion-checkbox>
+</ion-col>
+		  </ion-row>
+
+		  <ion-row>
+			<ion-item>
+				<ion-label position="floating">
+					Nombre del caso confirmado COVID-19:</ion-label>
+				<ion-input></ion-input>
+			  </ion-item>
+			  </ion-row>
+
+
+</ion-card-content>
+</ion-card>
+</div>
+<div *ngFor="let item of items3;let index = index" class="header" (click)="showSubItem3(index)">
+<ion-button expand="block"> 
+5°todo lleno
+</ion-button>
+
+
+<ion-card class="animate_animated animate_zoomInUp" *ngIf="visibleIndex3 === index">
+	<ion-card-header>
+	<p style=" text-align: center;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+		5.-EXAMENES DE LABORATORIO
+</p>
+   </ion-card-header>
+<ion-card-content>
+	<hr style="width: 100%; margin-top: -5px; text-align: center; background-color: rgb(133, 128, 128)">		
+
+	<ion-row>
+		<!--Quinto grupo de chceckBox-->
+		<ion-col size="6">Toma de muestra </ion-col>
+			<ion-col size="1">S
+			</ion-col>	
+					  <ion-col size="1">
+						  <ion-checkbox color="light"></ion-checkbox>
+					   </ion-col>
+					  <ion-col size="1">N</ion-col>
+					<ion-col size="1">
+						   <ion-checkbox color="light"></ion-checkbox>
+					  </ion-col>
+		</ion-row>
+
+
+		
+						  	<!--quarto input data-->
+							  <ion-row>
+								<ion-item>
+									<ion-label position="floating">Fecha de recepción de la muestra: </ion-label>
+									<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+								</ion-item>
+								  </ion-row>
+
+
+								  
+						  	<!--quarto input data-->
+							  <ion-row>
+								<ion-item>
+									<ion-label position="floating"> Fecha de resultado:  </ion-label>
+									<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+								</ion-item>
+								  </ion-row>
+
+								  <ion-row>
+									<!--Quinto grupo de chceckBox-->
+									<ion-col size="6">Hisopado nasal: </ion-col>
+										<ion-col size="1">S
+										</ion-col>	
+												  <ion-col size="1">
+													  <ion-checkbox color="light"></ion-checkbox>
+												   </ion-col>
+												  <ion-col size="1">N</ion-col>
+												<ion-col size="1">
+													   <ion-checkbox color="light"></ion-checkbox>
+												  </ion-col>
+									</ion-row>
+
+	<!--quarto input data-->
+	<ion-row>
+		<ion-item>
+			<ion-label position="floating"> Fecha  </ion-label>
+			<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+		</ion-item>
+		  </ion-row>
+
+
+
+
+
+
+
+		  
+		  <ion-row>
+			<!--Quinto grupo de chceckBox-->
+			<ion-col size="6">Lavado Broncoalveolar </ion-col>
+				<ion-col size="1">S
+				</ion-col>	
+						  <ion-col size="1">
+							  <ion-checkbox color="light"></ion-checkbox>
+						   </ion-col>
+						  <ion-col size="1">N</ion-col>
+						<ion-col size="1">
+							   <ion-checkbox color="light"></ion-checkbox>
+						  </ion-col>
+			</ion-row>
+
+<!--quarto input data-->
+<ion-row>
+<ion-item>
+<ion-label position="floating"> Fecha  </ion-label>
+<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+</ion-item>
+</ion-row>
+
+
+
+
+
+
+
+
+<ion-row>
+	<!--Quinto grupo de chceckBox-->
+	<ion-col size="6">Hisopado faríngeo: </ion-col>
+		<ion-col size="1">S
+		</ion-col>	
+				  <ion-col size="1">
+					  <ion-checkbox color="light"></ion-checkbox>
+				   </ion-col>
+				  <ion-col size="1">N</ion-col>
+				<ion-col size="1">
+					   <ion-checkbox color="light"></ion-checkbox>
+				  </ion-col>
+	</ion-row>
+
+<!--quarto input data-->
+<ion-row>
+<ion-item>
+<ion-label position="floating"> Fecha  </ion-label>
+<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+</ion-item>
+</ion-row>
+
+
+
+
+
+
+
+<ion-row>
+	<!--Quinto grupo de chceckBox-->
+	<ion-col size="6">Aspirado Traqueal:  </ion-col>
+		<ion-col size="1">S
+		</ion-col>	
+				  <ion-col size="1">
+					  <ion-checkbox color="light"></ion-checkbox>
+				   </ion-col>
+				  <ion-col size="1">N</ion-col>
+				<ion-col size="1">
+					   <ion-checkbox color="light"></ion-checkbox>
+				  </ion-col>
+	</ion-row>
+
+<!--quarto input data-->
+<ion-row>
+<ion-item>
+<ion-label position="floating"> Fecha  </ion-label>
+<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+</ion-item>
+</ion-row>
+
+
+
+
+
+
+<ion-row>
+	<!--Quinto grupo de chceckBox-->
+	<ion-col size="6">Aspirado nasofaríngeo: </ion-col>
+		<ion-col size="1">S
+		</ion-col>	
+				  <ion-col size="1">
+					  <ion-checkbox color="light"></ion-checkbox>
+				   </ion-col>
+				  <ion-col size="1">N</ion-col>
+				<ion-col size="1">
+					   <ion-checkbox color="light"></ion-checkbox>
+				  </ion-col>
+	</ion-row>
+
+<!--quarto input data-->
+<ion-row>
+<ion-item>
+<ion-label position="floating"> Fecha  </ion-label>
+<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+</ion-item>
+</ion-row>
+
+
+
+
+
+
+<ion-row>
+	<!--Quinto grupo de chceckBox-->
+	<ion-col size="6">Sangre: </ion-col>
+		<ion-col size="1">S
+		</ion-col>	
+				  <ion-col size="1">
+					  <ion-checkbox color="light"></ion-checkbox>
+				   </ion-col>
+				  <ion-col size="1">N</ion-col>
+				<ion-col size="1">
+					   <ion-checkbox color="light"></ion-checkbox>
+				  </ion-col>
+	</ion-row>
+
+<!--quarto input data-->
+<ion-row>
+<ion-item>
+<ion-label position="floating"> Fecha  </ion-label>
+<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+</ion-item>
+</ion-row>
+
+
+
+
+
+
+
+<ion-row>
+	<!--Quinto grupo de chceckBox-->
+	<ion-col size="6">Otras muestras: Especificar… </ion-col>
+
+	<ion-input></ion-input>
+		<ion-col size="1">S
+		</ion-col>	
+				  <ion-col size="1">
+					  <ion-checkbox color="light"></ion-checkbox>
+				   </ion-col>
+				  <ion-col size="1">N</ion-col>
+				<ion-col size="1">
+					   <ion-checkbox color="light"></ion-checkbox>
+				  </ion-col>
+	</ion-row>
+
+<!--quarto input data-->
+<ion-row>
+<ion-item>
+<ion-label position="floating"> Fecha de toma de muestra   </ion-label>
+<ion-datetime displayFormat=" DD / MM / YYYY"></ion-datetime>
+</ion-item>
+</ion-row>
+
+
+
+
+
+
+<ion-row>
+	<ion-item>
+		<ion-label position="floating">Nombre del Laboratorio </ion-label>
+		<ion-input></ion-input>
+	  </ion-item>
+	  </ion-row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-card-content>
+</ion-card>
+</div>
+<div *ngFor="let item of items5;let index = index" class="header" (click)="showSubItem5(index)">
+<ion-button expand="block"> 
+ 6º todo lleno
+</ion-button>
+
+
+<ion-card class="animate_animated animate_zoomInUp" *ngIf="visibleIndex5 === index">
+	<ion-card-header>
+	<p style=" text-align: center;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Resultado</p>
+   </ion-card-header>
+<ion-card-content>
+	<hr style="width: 100%; margin-top: -5px; text-align: center; background-color: rgb(133, 128, 128)">		
+<h6 style="text-align: center;">SARS CoV-2:</h6>
+<form [formGroup]="form6">
+<ion-row>
+<ion-col size=3>
+	<label style="text-align: right;">POSITIVO</label>
+	</ion-col>
+
+	<ion-col size=3>
+		<ion-checkbox id="positvo" formControlName="positivo" style="text-align: left;"></ion-checkbox>
+	</ion-col>
+
+	<ion-col size=3>
+		<label>NEGATIVO</label>
+	</ion-col>
+
+	<ion-col size=3>
+		<ion-checkbox id="negativo" formControlName="negativo"></ion-checkbox>
+	</ion-col>
+
+
+	</ion-row>
+<ion-button expand="block"> 
+enviar</ion-button>
+</form>
+
+</ion-card-content>
+
+</ion-card>
+</div>
+
+
+
+
+</div>
+<div id="demo-content" class="animated slideOutLeft"  style="animation-duration: 5s;  
+   background: linear-gradient(135deg, rgba(150, 192, 192, 0.815) 0%,rgba(150, 192, 192, 0.815) 100%), linear-gradient(to right, rgba(150, 192, 192, 0.815)0%,rgba(150, 192, 192, 0.815)	 100%);
+    width: 50%; height: 1050px; margin-top: -500px;" >
+    </div>
+   
+    <div id="loader-wrapper" class="animated bounceOut" style="animation-duration: 5s;" >
+      <div id="loader"></div>
+    </div>
+      
+   
+   <div id="demo-content" class="animated slideOutRight"   style="animation-duration: 5s;     
+   
+   background: linear-gradient(135deg, rgba(150, 192, 192, 0.815)0%,rgba(150, 192, 192, 0.815) 100%), linear-gradient(to right, rgba(150, 192, 192, 0.815) 0%,rgba(150, 192, 192, 0.815) 100%);
+    width: 50%; height: 1050px; margin-top: -1050px; margin-left: 50%;" >
+      
+
+
+      
+    </div>
+</div>
+
+</div>
+
+</ion-content>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>window.jQuery || document.write('<script src="../../../assets/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="../../../assets/main.js"></script>  <script>
+ 
+setTimeout(function() {
+$('#teste').fadeOut('fast');
+}, 2000);
+
+</script>
+<!--
+  
+  aplicativo de frete, onde há as seguintes variaveis: 
+
+		- valor do combustivel
+		- local de partida
+		- local de destino 
+		- km/h entre lp e ld 
+		- km/h do automóvel 
+		- margem de erro 
+		- lucro em cima do frete desejado 
+		- media de lucro e gasto na dashboard 
+			
+
+função    1°  valor do combustivel * km/h entre lp e ld = novo valor 
+2°  novo valor / km/h do automóvel = valor da viagem
+3°  /*colocar porcentagem deseja em cima do (valor da viagem)*/ valor da viagem + porcentagem 
+            = valor da viagem com lucro
+4° valor da viagem com lucro / porcentagem = lucro
+5°/*fazer contagem de lucro + margem de erro (cima e baixo)*/
+<p-chart type="pie" [data]="data"></p-chart>
+-->

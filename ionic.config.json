@@ -1,0 +1,8 @@
+{
+  "name": "frete",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
